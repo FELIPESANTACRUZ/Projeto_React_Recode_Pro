@@ -32,14 +32,14 @@ const ListaProdutos = () => {
     return (
         <>
         <div>
-        <section className=" produtos container row" >
+        <section className=" produtos container mt-5 mb-3 row" >
             {
                 props.map(row => {
                     return (  
                         <div className="col-3  text-center pl-2">
-                                <div className="card my-2 "  >
+                                <div className="card h-100 "  >
                                     <div  key={row.idproduto} style={{width:"12rem" }}>
-                                            <img src={row.imagem} className="card-img-center"style={{width:"150px" }} onMauseOver={destaque}/>
+                                            <img src={row.imagem} className="card-img-center" style={{width:"150px" }} onMauseOver={destaque}/>
                                             <div className="card-body">
                                                 <h5 id={row.idproduto}className="card-title text-center text-danger h4"><strong>{row.nomeProduto}</strong></h5>
                                                 <p className="card-text text-center">

@@ -60,10 +60,10 @@ Cadastro efetuado com sucesso!
     return (
         <div key={element.id} className="card w-50 mx-auto mt-3 mb-5">
         <div className="card-header">
-            {element.nome}
+           Nome: {element.nome}
         </div>
         <div className="cardy-body">
-            Telefone: {element.msg}
+            Mensagem: {element.msg}
         </div>
     </div>
     )

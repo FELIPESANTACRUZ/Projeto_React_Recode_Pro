@@ -49,14 +49,38 @@ create table clientes (
     nome VARCHAR(25)NOT NULL,
     sobrenome VARCHAR(25) NOT NULL,
     cpf VARCHAR(25) NOT NULL,
+    cep BIGINT(50) NOT NULL;
     telefone BIGINT(50),
     email VARCHAR(50) NOT NULL,
     FOREIGN KEY (idProdutos) REFERENCES produtos(idproduto)
 
 );
 
+ALTER TABLE clientes
+	ADD COLUMN cep BIGINT(50) AFTER cpf;  
+
+    ALTER TABLE clientes
+	MODIFY COLUMN cep BIGINT(50) NOT NULL; 
+
+
+
+
 INSERT INTO clientes(idprodutos,nome,sobrenome,cpf,telefone,email)
  VALUES (10,"Felipe","Suricata","123456789",1190267248,"felipesuricatas@gmail.com");
+
+ INSERT INTO clientes(idprodutos,nome,sobrenome,cpf,telefone,email)
+ VALUES (3,"Sabrina","Simon","87892499002",11964502894,"sabrinasimon@hotmail.com");
+
+ INSERT INTO clientes(idprodutos,nome,sobrenome,cpf,telefone,email)
+ VALUES (10,"Gabriel","Lessa","123456789",1190267248,"gabriel_lessa@outlook.com");
+
+INSERT INTO clientes(idprodutos,nome,sobrenome,cpf,telefone,email)
+ VALUES (12,"Ghost9--","xxx","640392281",9648267438,"ghost_losgrandes@gmail.com");
+
+INSERT INTO clientes(idprodutos,nome,sobrenome,cpf,telefone,email)
+ VALUES (5,"Alessandra","Maze","90473292",957249244,"alemaze@gmail.com");
+
+
 
  SELECT * FROM clientes;
 
@@ -66,6 +90,11 @@ INSERT INTO clientes(idprodutos,nome,sobrenome,cpf,telefone,email)
  JOIN clientes AS u
  ON p.idproduto = u.idprodutos;
 
-
+SELECT p.categoria , p.imagem ,
+         p.preco_venda , u.nome ,
+          u.sobrenome ,  u.email 
+        FROM produtos AS p
+        JOIN clientes AS u
+        ON p.idproduto = u.idprodutos;
 
 

@@ -18,7 +18,7 @@ class Produtos
 
         
         
-        $stmt = $connection->query("SELECT * FROM produtos");
+        $stmt = $connection -> query("SELECT * FROM produtos");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

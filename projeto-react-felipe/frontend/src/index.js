@@ -19,6 +19,7 @@ import FormularioContatos from './components/contatos/formulario.jsx';
 
 // compras
 // import FormCompras from './components/Compras/compras.jsx';
+import  Pedidos from './components/Compras/pedidos.jsx'
 
 
 
@@ -44,7 +45,6 @@ ReactDOM.render(
         <Route exact path="/index.php">
         <Menu />
         <Home />
-        <Footer />
         </Route>
  {/*fim index route */}
 
@@ -53,14 +53,14 @@ ReactDOM.render(
         <Route exact path="/loja.php">
         <Menu />
         <Lojas />
-        <Footer />
+
         </Route>
  {/* fim lojas route */}
 
  {/* produtos route */}
         <Route exact path="/produtos.php">
         <Menu />
-        <div className=" suricatas3 d-flex">
+        <div className=" container d-flex">
         <div className="suricatas">
         <Categorias />
         </div>
@@ -68,7 +68,6 @@ ReactDOM.render(
         <ListaProdutos />
         </div>
         </div>
-        <Footer />
         </Route>
  {/* fim produtos route */}
 
@@ -77,18 +76,23 @@ ReactDOM.render(
         <Menu />
         <Contatos />
         <FormularioContatos />
-        <Footer />
         </Route>
  {/* fim contatos route */}
 
  {/* compras route */}
- <Route exact path="/compras.php">
- <Menu />
+       <Route exact path="/compras.php">
+       <Menu />
  {/* <FormCompras /> */}
- <Footer />
-</Route>
+       <Footer />
+       </Route>
 {/* 
  fim compras route */}
+
+       <Route exact path="/pedidos.php">
+       <Menu />
+       <Pedidos />     
+       </Route>
+       <Footer />
    
 </React.StrictMode>
             </Router>,

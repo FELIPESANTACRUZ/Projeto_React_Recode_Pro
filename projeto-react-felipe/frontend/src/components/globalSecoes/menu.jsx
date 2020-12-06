@@ -17,6 +17,10 @@ const Menu = () => {
           <a className="nav-link active " href="./produtos.php"><button type="button" className="btn btn-light text-danger">Nossos Produtos</button></a>
       </li>
       <div className="dropdown-divider "></div>
+      <li className="nav-item  ">
+          <a className="nav-link active " href="./pedidos.php"><button type="button" className="btn btn-light text-danger">Pedidos</button></a>
+      </li>
+      <div className="dropdown-divider "></div>
       <li className="nav-item ">
           <a className="nav-link active " href="./loja.php"><button type="button" className="btn btn-light text-danger">Nossas Lojas</button></a>
       </li>
